@@ -1,0 +1,415 @@
+Project Title: Mobile-Based Semantic Lost and Found Recovery Platform
+CHAPTER 1: INTRODUCTION
+1.1 Introduction
+This project develops and evaluates a Mobile-Based Semantic Lost and Found Recovery Platform which is a mobile application platform that uses Natural Language Processing (NLP) to improve the accuracy of matching lost and found items and making retrieval of lost items more efficient. This chapter sets the context, defines the problem, define the aim of the project, outlines objectives, describes the methodology and covers the project’s significance, feasibility and ethical considerations.
+1.2 Background and Context of the Project
+Traditional lost and found systems rely on physical logs or simple digital databases that use keyword-based searches. Although digitization improved record accessibility, these systems still struggle to interpret the semantic meaning of textual descriptions, leading to low recovery rates, inefficiency and user frustration.
+Recent advancements in Natural Language Processing (NLP), specifically in semantic text matching enable systems to compare textual descriptions based on context and meaning rather than exact keywords. These developments present an opportunity to transform lost and found services into intelligent, text-based retrieval systems that improve matching accuracy and efficiency. The main challenge is to apply these technologies effectively to achieve both accuracy and practicality in real world recovery scenarios.
+1.3 Problem Statement
+The existing lost and found item retrieval systems exhibit low matching accuracy because they rely on lexical cosine similarity algorithms that compare keywords rather than understanding meaning. This lexical dependence prevents the system from bridging the semantic gap between textual item descriptions (e.g., “navy blue Herschel backpack with leather straps”) and visual data (e.g., an image of a “dark blue backpack with leather handles”). Consequently, these systems achieve poor retrieval performance, require extensive manual verification and delay item recovery. The goal of this project is to develop and evaluate an NLP-based semantic text matching system that aligns textual descriptions to improve retrieval accuracy and efficiency by at least 30% in Mean Reciprocal Rank (MRR)
+1.4 Aim
+To design, develop and evaluate a Mobile-Based Semantic Lost and Found Recovery Platform that significantly improves the accuracy, efficiency and security of lost and found item recovery.
+1.5 Research Objectives
+To design and implement an NLP based semantic matching algorithm that generates embeddings for text and metadata (time and location) features, achieving at least 30% improvement in Mean Reciprocal Rank (MRR) compared to a baseline keyword-based system.
+To develop a proactive searching mechanism that continuously monitors the system’s database for new matches to lost items ensuring users are automatically notified when a potential match is found even if the found item is reported days or weeks later.
+To integrate and test a multi layered verification workflow that incorporates a secure “secret question” mechanism, aiming to reduce false claim rates by 25% and achieve a user verification success rate above 90% during controlled evaluations.
+1.6 Scope and Limitations of the Project
+The scope and limitations of this project are outlined below to clearly define the system’s boundaries, highlight the key functionalities addressed and acknowledge constraints encountered during development.
+Scope
+The scope of the project include the following:
+Design, development, and evaluation of a functional mobile application prototype of the Mobile-Based Semantic Lost and Found Recovery Platform.
+Its core functionalities include:
+User registration and authentication.
+Item reporting with textual descriptions and metadata (location and time).
+Automated semantic matching using Natural Language Processing models.
+Proactive searching of lost items in the vector database
+Notification system to alert users of potential matches.
+Secure verification workflow to confirm ownership.
+Demonstrating technical feasibility and effectiveness of Natural Language Processing in the Lost and Found domain.
+Testing and evaluation using standard information retrieval metrics.
+Limitations
+The limitations of the project include the following:
+Prototype developed and tested in a controlled academic environment (University of Zimbabwe campus) and not city-wide or multi-venue.
+Scalability designed but actual deployment and stress-testing limited by computational resources and time.
+Evaluation mainly based on synthetic or public datasets with limited real world testing data.
+Basic security measures included but no comprehensive penetration testing or security audits.
+Focus on common lost and found items (bags, phones, wallets, keys) and not optimized for specialized or unusual items.
+Limitations will be addressed in future work and recommendations for system enhancement.
+1.7 Feasibility Study
+The feasibility of this project has been researched across technical, operational, economic and social dimensions to ensure that the proposed system can be successfully developed and implemented within the constraints of this academic research project.
+Technical Feasibility
+The project is technically feasible because tools like PyTorch, Hugging Face, and ChromaDB are freely available. Cloud platforms (Google Colab, AWS, GCP) provide GPU support are also free. Required skills (ML, mobile app development, database integration) are achievable in an academic setting.
+Operational Feasibility
+The system automates matching, easing staff workload and requiring no special user training. Though city-wide deployment is challenging, the platform is scalable and can start at a smaller institutional level. This makes the project to be operationally feasible.
+Economic Feasibility
+Costs are minimal because the project will be relying mainly on open-source tools and free cloud tiers. The budget is under $100, covering possible premium cloud expenses. Development time is provided within the academic program. This makes the project to be economically feasible.
+Social Feasibility
+The system meets a real need which is helping people recover lost items and easing administrative burdens. It promotes NLP acceptance by showing practical benefits aligned with societal digitization trends. This makes the project socially feasible. 
+1.8 Significance and Motivation for the Project
+This research project holds significant value for the public, venue operators and the NLP research community. For individuals, it offers an effective tool that greatly improves the chances of recovering lost items such as wallets, phones and documents, reducing stress and inconvenience by automating the matching process with advanced NLP techniques. For venues like schools, parks and shopping centers, the system reduces the administrative burden of managing lost and found services, freeing staff from manual searches and improving recovery success, which enhances the reputation and customer experience.
+For the NLP community, this project presents a novel application of semantic text matching in the lost and found domain, offering valuable benchmarks and insights. It highlights domain-specific challenges such as diverse item types, contributing knowledge on text-based retrieval systems with clear evaluation metrics.
+The motivation arises from recognizing the gap in applying advanced NLP to everyday, practical problems. Lost and found services are an area where NLP can deliver immediate benefits yet remain underutilized. This project aims to bridge that gap by demonstrating how state-of-the-art NLP can improve efficiency, accuracy and user satisfaction. It also serves as a learning opportunity to apply cutting-edge text matching technologies to a real world challenge.
+1.9 Work Plan
+The project will be executed over a nine month period, organized into distinct phases that build upon each other to ensure systematic progress from initial planning through to final delivery. The work plan follows a Design Science Research Methodology.
+Task
+Start Month
+Duration (Months)
+Notes
+Project Initiation & Planning
+1
+1
+Finalize proposal, consultations, define objectives, review existing systems.
+System Architecture & Dataset Planning
+2
+1
+Design architecture, identify NLP integration points, finalize dataset strategy.
+Ethical Considerations, Dataset Collection, Backend Environment Setup
+3
+1
+Submit ethics clearance, collect real-world campus data, generate synthetic data. Configure development environment, install libraries, setup CI/CD.
+Backend API Development
+4
+1
+User authentication, item reporting APIs, database schema, initial unit tests.
+NLP Model Development
+5
+1
+Design NLP model, implement text embedding modules, training pipeline setup, evaluate using IR metrics.
+Mobile App Development
+6
+1
+Build React Native app, user registration, item reporting forms, search interface, integrate with backend.
+System Integration & Evaluation
+7
+1
+Integrate NLP model with backend, implement notifications, end-to-end testing, usability evaluation.
+Finalization, Reporting & Submission
+8
+1
+Write final report, prepare documentation and user manual, package system, prepare presentation.
+Gantt Chart
+1.10 Conclusion
+This chapter introduced the Mobile-Based Semantic Lost and Found Recovery Platform project. It also highlighted the limitations of current keyword based systems that lack semantic understanding. It clearly defined the problem of low matching accuracy and user frustration, set objectives to develop and evaluate the Mobile-Based Semantic Lost and Found Recovery Platform addressing these issues. The scope and limitations outlined project boundaries, while the feasibility study confirmed its technical, operational, economic and social viability. The significance and motivation emphasized benefits for users, venue operators and NLP research. Then lastly a work plan established a structured timeline for development. 
+CHAPTER 2: LITERATURE REVIEW
+2.1 Introduction
+This chapter provides a comprehensive overview of existing research, theories and published works relevant to the development of a Mobile-Based Semantic Lost and Found Recovery Platform. The literature review establishes the context for the project by examining the evolution of Lost and Found systems, the role of Natural Language Processing (NLP) in semantic matching, proactive searching and the integration of verification mechanisms to enhance security and accuracy. By critically analyzing the strengths and limitations of current systems, this chapter justifies the need for a text-only, NLP-driven approach that leverages semantic embeddings, attention mechanisms, a proactive searching mechanism and multi-layered verification to transform lost and found item retrieval.
+The review is structured to first explore the methodologies and gaps in traditional and modern systems, followed by a discussion of similar projects and an identification of areas for improvement. The chapter concludes by synthesizing these insights to highlight how the proposed system will address the limitations of existing solutions.
+2.2 Review of Relevant Literature
+The following sections review key literature sources that provide foundational insights into the development of semantic text matching systems for lost and found items. These sources are organized to reflect the progression from traditional keyword-based systems to advanced NLP-driven approaches, as well as the integration of proactive searching and verification layers to enhance security.
+Traditional Digital Lost and Found Systems
+Shrivastava et al. (2025) developed a traditional digital lost and found platform that relies on keyword-based matching and manual user searches. The system uses a React.js frontend and MongoDB backend to digitize the process of reporting and retrieving lost items. While this approach improves accessibility compared to physical logbooks, it suffers from significant limitations. The system’s reliance on lexical matching means it cannot interpret the semantic meaning behind varied descriptions of the same item. For example, a user searching for a "navy blue backpack" would not retrieve results for a "dark blue bag," even if both descriptions refer to the same item. This lack of semantic understanding leads to low retrieval accuracy, user frustration and inefficiency in the matching process.
+The proposed system addresses these limitations by replacing keyword-based matching with semantic text matching using SBERT embeddings. This approach automates the retrieval process, ensuring that items are matched based on their contextual meaning rather than exact keyword alignment, thereby improving both accuracy and user experience.
+Sentence-BERT (SBERT) for Semantic Embeddings
+Muennighoff (2022) introduced Sentence-BERT (SBERT), a transformer-based model designed to generate semantically meaningful embeddings for sentences and short texts. SBERT outperforms traditional models like TF-IDF and Word2Vec by capturing the contextual relationships between words, making it ideal for tasks that require nuanced understanding, such as matching textual descriptions in lost and found systems. For instance, SBERT can effectively link descriptions like "navy blue Herschel backpack with leather straps" and "dark blue Herschel brand bag featuring leather handles" by recognizing their semantic equivalence.
+However, SBERT is computationally intensive and requires fine-tuning for domain-specific applications. The proposed system addresses this by implementing a lightweight, fine-tuned version of SBERT optimized specifically for lost and found item descriptions. This ensures that the model remains efficient and scalable while maintaining high accuracy in semantic matching.
+gMatch: Semantic Matching for Knowledge Base Question Answering
+Jiao et al. (2021) developed gMatch, a semantic matching-based approach for knowledge base question answering (KBQA). gMatch uses Siamese neural networks to compute the semantic similarity between natural language questions and SPARQL queries, ensuring that the generated queries accurately reflect the user’s intent. This system is particularly effective in reducing semantic loss between questions and queries, which is a common issue in traditional KBQA systems that are often decoupled from the knowledge base.
+While gMatch is designed for structured knowledge bases, the proposed system adapts its Siamese network architecture to focus on unstructured textual descriptions of lost and found items. By eliminating the dependency on knowledge bases, the system becomes more flexible and scalable, capable of handling the varied and unstructured nature of real-world lost and found reports.
+HA-RCNN: Short Text Similarity with Attention Mechanisms
+Ji and Zhang (2022) proposed HA-RCNN, a model that combines BiGRU, CNN and a headword attention mechanism to calculate short text similarity. This approach enhances the influence of key words such as nouns and verbs that carry the most meaningful information in a sentence. For example, in the sentence "Lost my brown wallet near the library," the words "brown," "wallet," and "library" are prioritized to improve the accuracy of similarity calculations.
+HA-RCNN achieves higher recall and F1 scores compared to traditional methods, but its complexity and the need for large datasets can limit performance in smaller-scale applications. The proposed system simplifies this approach by focusing the attention mechanism specifically on key item descriptors, such as color, brand, and location. This ensures that the most relevant features are prioritized during matching, improving both efficiency and accuracy.
+Semantic Question Answering Systems
+Antoniou and Bassiliades (2021) provided a comprehensive survey of semantic question answering (SQA) systems, which convert natural language questions into structured queries (e.g., SPARQL) to retrieve answers from knowledge bases. These systems employ a variety of techniques, including dependency parsing, entity and relation extraction and semantic graph-based models to represent questions and their corresponding answers.
+However, SQA systems typically require structured knowledge bases, which limits their scalability for unstructured data, such as the textual descriptions found in lost and found reports. The proposed system eliminates this dependency by focusing on unstructured textual descriptions, making it more adaptable to real-world scenarios where items are described in varied and informal ways.
+TextSLAM: Visual SLAM with Semantic Text Features
+Li et al. (2022) introduced TextSLAM, a visual SLAM system that integrates semantic text features to improve localization and mapping in dynamic environments. TextSLAM treats text as planar patches with semantic meaning, allowing it to match text objects across varying conditions, such as day and night or different viewpoints. The system uses Levenshtein distance to measure the similarity between text strings, ensuring that semantic meaning remains invariant even when visual appearances change.
+While TextSLAM is designed for visual SLAM and not directly applicable to lost and found item retrieval, it demonstrates the robustness of semantic text matching in dynamic environments. The proposed system adopts a text-only approach, optimizing the matching process for mobile accessibility and eliminating the need for visual data, which can be both impractical and a security risk in lost and found scenarios.
+Campus Lost and Found Audit: Fraud and Verification
+Honde and Mutasa (2024) conducted an audit of campus lost and found systems, revealing a 60% fraudulent claim rate due to the absence of verification mechanisms. The study highlights that systems relying solely on textual descriptions or images are vulnerable to exploitation, as individuals can easily guess common item descriptions (e.g., "Black iPhone") to fraudulently claim items.
+The proposed system addresses this critical gap by implementing a multi-layered verification workflow. This includes secret questions (e.g., "What’s inside the wallet?") and admin oversight to review flagged claims, significantly reducing the risk of fraud and enhancing user trust in the system.
+Hybrid Lost and Found Systems
+Prawira and Saputri (2023) developed a hybrid lost and found system that combines TF-IDF for text and ResNet-50 for image matching. While this approach represents an advancement over purely keyword-based systems, it suffers from poor image matching accuracy (less than 30%) and static thresholds that limit adaptability to real-world variations in item descriptions and image quality.
+The proposed system eliminates the dependency on images entirely, focusing instead on semantic text matching with dynamic thresholds. This not only simplifies the architecture but also enhances scalability and security by removing the risks associated with image uploads, such as fraud or privacy concerns.
+Multi-Modal Systems for Lost and Found Items
+Dhanawardhana et al. (2025) proposed a multi-modal system that uses a dual-tower vision-language model to fuse images, text, and metadata for lost and found item retrieval. While this approach achieves high accuracy by leveraging multiple data types, its complex architecture and reliance on multi-modal data make it less practical for widespread deployment, particularly in resource-constrained environments.
+The proposed system simplifies this process by focusing on text-only matching, which is not only more scalable but also more secure and accessible. By eliminating the need for image processing, the system reduces computational overhead and mitigates the risks of fraud and privacy breaches associated with image uploads.
+2.3 Discussion of Similar Projects or Systems
+This section examines and discusses projects and systems that have addressed similar challenges in lost and found item retrieval, semantic matching, and verification. By comparing these systems with the proposed solution, the discussion highlights their strengths, weaknesses, and the unique contributions that the proposed system will make.
+Traditional Digital Lost and Found Platforms
+Traditional digital platforms, such as the system developed by Shrivastava et al. (2025), represent the baseline for lost and found systems. These platforms successfully digitize the process of reporting and retrieving lost items but fail to address the core challenge of semantic matching. Users are left to manually search through databases using keyword queries, which is both time-consuming and frustrating, particularly when descriptions vary between losers and finders. The lack of semantic understanding results in low retrieval accuracy and poor user satisfaction, underscoring the need for more advanced, automated solutions.
+The proposed system directly addresses these limitations by replacing keyword-based matching with semantic text matching, ensuring that items are retrieved based on their contextual meaning rather than exact lexical alignment.
+NLP-Based Semantic Matching Systems
+Systems that leverage NLP for semantic matching, such as those based on SBERT or gMatch, represent a significant advancement over traditional keyword-based approaches. These systems can interpret the context and meaning behind textual descriptions, leading to more accurate and efficient matching. For example, SBERT can recognize that "navy blue backpack" and "dark blue bag" refer to the same item, even if the terminology differs.
+However, many existing NLP-based systems still rely on static thresholds, which limits their adaptability to real-world variations in item descriptions. The proposed system improves upon these approaches by incorporating dynamic thresholds and continuous learning, ensuring that the model adapts and improves with user feedback over time.
+Semantic Question Answering and TextSLAM
+Semantic question answering systems and TextSLAM demonstrate the power of semantic matching in retrieving information from structured and unstructured data. TextSLAM, in particular, shows how text features can be used as invariant landmarks for localization, even under challenging conditions such as varying illumination or viewpoints. However, these systems are not designed for lost and found item retrieval, where the primary challenge is matching unstructured textual descriptions rather than structured knowledge bases or visual landmarks.
+The proposed system builds on these insights by focusing on text-only semantic matching, optimized for the unique requirements of lost and found scenarios. This ensures that the system is both scalable and secure, while also being accessible via a mobile app.
+Verification and Security in Lost and Found Systems
+The audit conducted by Honde and Mutasa (2024) reveals a critical gap in existing lost and found systems: the lack of verification mechanisms leads to high rates of fraudulent claims. Systems that rely solely on textual descriptions or images without verification are vulnerable to exploitation, as individuals can easily guess common item descriptions to claim items that do not belong to them.
+The proposed system introduces a multi-layered verification workflow, including secret questions and admin oversight, to address this issue. This ensures that items are returned to their rightful owners while significantly reducing the risk of fraud, thereby enhancing both security and user trust.
+Hybrid and Multi-Modal Systems
+Hybrid systems, such as those proposed by Prawira and Saputri (2023) and Dhanawardhana et al. (2025), attempt to improve matching accuracy by combining text and image data. However, these systems often suffer from poor image matching accuracy and complex architectures that limit their scalability and practicality. Additionally, the reliance on images introduces security risks, as fraudsters can exploit image uploads to make fraudulent claims.
+The proposed system simplifies this process by focusing on text-only matching, which is not only more secure but also more scalable and efficient. By eliminating the need for image processing, the system reduces computational complexity and mitigates the risks associated with image-based fraud.
+2.4 Identification of Gaps or Areas for Improvement
+This section analyzes the existing literature to identify gaps, unanswered questions and limitations in current lost and found systems. These gaps highlight the need for the proposed system and underscore its potential to make unique contributions to the field.
+Inefficient Matching Mechanisms
+One of the most significant limitations of current lost and found systems is their reliance on lexical or keyword-based matching. This approach leads to poor retrieval accuracy, particularly when item descriptions vary even slightly. For example, a system using TF-IDF might fail to match a "navy blue backpack" with a "dark blue bag," resulting in missed connections and user frustration.
+The proposed system addresses this gap by adopting semantic embeddings generated by SBERT, which capture the contextual meaning of textual descriptions. This ensures that items are matched based on their semantic similarity rather than exact keyword alignment, significantly improving retrieval accuracy and user satisfaction.
+Limited Semantic Understanding
+Current systems often lack deep semantic comprehension, failing to interpret the nuanced details or varied descriptions of the same item. For instance, a system using ResNet-50 for images and TF-IDF for text may not recognize that "wallet" and "billfold" refer to the same object, leading to low match quality and high false negatives.
+The proposed system leverages transformer-based models like SBERT to achieve a deeper understanding of textual descriptions. This allows the system to recognize synonyms, paraphrases, and other linguistic variations, ensuring that items are matched accurately regardless of how they are described.
+Lack of Proactive Matching Mechanisms
+Existing lost and found systems typically only attempt to match lost items with found items at the time of reporting. Once a lost item is registered, there is no automated process to continuously check for new matches as additional found items are reported. This results in missed recovery opportunities, particularly when found items are reported days or weeks after the lost item. This gap forces users to manually revisit the system to check for updates, which is both time-consuming and frustrating. Some systems, such as those described by Shrivastava et al. (2025), rely entirely on user-initiated searches, placing the burden on the user to remember to check for new matches.
+The proposed system addresses this gap by introducing a proactive searching mechanism that automatically re-scans the database for new matches to lost items over a configurable period (e.g., 30 days). By reducing the need for manual follow-ups, this feature improves user satisfaction, recovery rates, and trust in the system.
+Verification and Security
+A critical gap in existing lost and found systems is the absence of robust verification mechanisms. Without verification, these systems are vulnerable to fraudulent claims, where individuals can exploit weak matching algorithms to claim items that do not belong to them. Honde and Mutasa (2024) found that up to 60% of claims in campus systems were fraudulent due to this lack of oversight.
+The proposed system introduces a multi-layered verification workflow, including secret questions and admin oversight, to address this issue. This ensures that only legitimate claims are approved, significantly reducing fraud and enhancing user trust in the system.
+Adaptability and Learning Deficiencies
+Most existing systems use static models and thresholds that do not improve with user feedback or adapt to new data. This limits their long-term performance and domain-specific optimization, as the systems cannot learn from failure cases or evolving user needs.
+The proposed system incorporates continuous learning, allowing the model to refine its matching algorithms based on user feedback and successful/failed matches. This ensures that the system remains adaptive and scalable, improving its accuracy and efficiency over time.
+Accessibility and Mobile Optimization
+Traditional lost and found systems are often web-based and not optimized for mobile accessibility. This limits their reach and usability, particularly in scenarios where users need to report or search for lost items on the go.
+The proposed system is designed as a mobile app using React Native, ensuring cross-platform accessibility and a seamless user experience. This makes the system more user-friendly and practical for real-world deployment.
+Security and Privacy Risks
+Systems that rely on image uploads for matching introduce significant security and privacy risks. Fraudsters can exploit image data to make fraudulent claims, while users may be hesitant to upload images of personal items due to privacy concerns.
+The proposed system eliminates these risks by focusing on text-only matching, removing the need for image uploads entirely. This not only enhances security but also simplifies the system architecture, making it more scalable and efficient.
+Tabularized Literature Review Summary
+Source
+System
+Methodology
+Gaps/Limitations
+How My System Will Be Better
+Shrivastava et al. (2025)
+Traditional Digital Lost and Found
+Keyword-based matching; manual user searches; React.js + MongoDB backend.
+Low retrieval accuracy; no semantic understanding; user frustration from manual effort., no proactive searching of lost items
+Semantic text matching with SBERT embeddings; automated, accurate, and efficient retrieval and proactive matching mechanisms
+Muennighoff (2022)
+Sentence-BERT (SBERT)
+Transformer-based semantic embeddings for sentences/short texts.
+Computationally intensive; requires fine-tuning for domain-specific tasks.
+Lightweight SBERT fine-tuned for lost/found item descriptions; optimized for mobile deployment.
+Jiao et al. (2021)
+gMatch
+Siamese neural networks for semantic similarity between questions and SPARQL queries.
+Designed for KBQA (knowledge bases); not directly applicable to lost/found items.
+Adapted Siamese networks for lost/found text descriptions; no KB dependency.
+Ji & Zhang (2022)
+HA-RCNN
+BiGRU + CNN + headword attention for short text similarity.
+Complex training; smaller datasets limit performance.
+Simplified attention mechanism focused on key item descriptors (e.g., color, brand, location).
+Antoniou & Bassiliades (2021)
+Semantic QA Systems
+Dependency parsing, entity/relation extraction, SPARQL queries for KBs.
+Requires structured KBs; not scalable for unstructured lost/found data.
+No KB dependency; works with unstructured textual descriptions.
+Li et al. (2022)
+TextSLAM
+Planar text features for SLAM; Levenshtein distance for semantic matching.
+Focused on visual SLAM; not designed for lost/found item retrieval.
+Text-only matching (no images); optimized for mobile app accessibility.
+Honde & Mutasa (2024)
+Campus Lost and Found Audit
+Audit of fraudulent claims; highlights 60% fraud rate due to lack of verification.
+No verification mechanisms; vulnerable to fraud.
+Multi-layered verification: secret questions + admin oversight to reduce fraud.
+Prawira & Saputri (2023)
+Hybrid Lost and Found
+TF-IDF + ResNet-50 for image/text matching.
+Poor image matching (<30% accuracy); static thresholds limit adaptability.
+No image dependency; focuses on semantic text matching with dynamic thresholds.
+Dhanawardhana et al. (2025)
+Multi-Modal System
+Dual-tower vision-language model; fusion of image, text, and metadata.
+Complex architecture; requires multi-modal data (images + text).
+Text-only system; simpler, more scalable, and secure.
+2.5 Conclusion
+This literature review has examined the evolution of lost and found systems, from traditional keyword-based platforms to advanced NLP-driven semantic matching approaches. The review highlights several critical gaps in existing systems, including inefficient matching mechanisms, limited semantic understanding, lack of verification, absence of proactive searching of lost items and poor adaptability. These limitations underscore the need for a semantic text matching system that leverages NLP, attention mechanisms, proactive searching and multi-layered verification to transform lost and found item retrieval.
+The proposed system addresses these gaps by introducing several key innovations and by integrating these advancements, the proposed system aims to automate, secure and scale lost and found item retrieval, providing a user-friendly, efficient and trustworthy solution for both individuals and institutions. 
+CHAPTER 3: METHODOLOGY
+3.1 Introduction
+This chapter outlines the approach, methods and techniques used to design, develop and evaluate the Mobile-Based Semantic Lost and Found Recovery Platform. It provides a clear roadmap for achieving the research objectives and addressing the gaps identified in the literature review. The methodology follows the Design Science Research (DSR) paradigm, which emphasizes problem-solving, innovation and empirical validation, making it well-suited for developing a functional and effective semantic text matching system.
+The chapter details the research methodology, including the Design Science Research framework and the software development process, which follows an iterative approach to ensure continuous improvement. It also covers data handling and feature engineering, NLP model development and training, tools and technologies and project requirements and design considerations. The methodology ensures that the system is accurate, efficient, secure and user friendly, addressing the core challenges in lost and found item retrieval.
+3.2 Research Methodology and Software Development Process
+Design Science Research (DSR) Methodology
+The project follows the Design Science Research (DSR) methodology, a problem-solving paradigm that focuses on creating and evaluating artifacts to address real-world challenges. DSR is particularly suitable for this project because it emphasizes innovation, empirical validation and iterative refinement, aligning with the goal of developing a semantic text matching system that improves the accuracy and efficiency of lost and found item retrieval.
+DSR involves the following key activities:
+Problem Identification and Motivation
+The inefficiency of traditional lost-and-found systems motivates the creation of an intelligent retrieval solution. Manual keyword searches cannot handle linguistic variability, leading to low recovery rates.
+Definition of Objectives
+Objectives include improving matching accuracy, reducing search time, and handling real-world description variability (e.g., synonyms, paraphrases). Performance improvements are measured using metrics such as MRR, Precision@K, and Recall@K.
+Design and Development
+The artifact consists of:
+An NLP-based semantic matching engine using Sentence-BERT
+A backend API
+A verification workflow for ownership authentication
+Demonstration
+The system is demonstrated in a real-world use case: matching lost item reports to found item descriptions within the University of Zimbabwe environment.
+Evaluation
+Quantitative and qualitative evaluations assess the model’s accuracy, usability and reliability through performance metrics and user feedback.
+Communication
+Documenting and sharing the research findings with the academic and practitioner communities.
+Iterative Software Development Process
+The software development process follows an iterative approach, organized into nine distinct phases that build upon each other to ensure systematic progress. This approach allows for continuous feedback and refinement, ensuring that the system evolves to meet user needs and technical requirements. The phases are as follows:
+Project Initiation and Planning
+System Architecture and Dataset Planning
+Ethical Considerations and Dataset Collection
+Backend Environment Setup
+Backend API Development
+NLP Model Development
+Mobile App Development
+System Integration and Evaluation
+Finalization, Reporting and Submission
+Each phase includes requirements gathering, design, implementation, testing and evaluation, ensuring that the system is robust, scalable and user-centric.
+3.3 Methods and Techniques
+This section details the specific methods and techniques employed throughout the project, including data handling and feature engineering, NLP model development and training and verification workflows. These methods are chosen to align with the project’s objectives of accuracy, efficiency, security and usability.
+3.3.1 Data Handling and Feature Engineering
+The system’s NLP-based semantic matching relies on careful data handling and feature engineering, which includes data acquisition, preparation and utilization for training and evaluation. The following subsections outline the processes involved:
+Data Collection
+The system uses public text datasets to train and evaluate the semantic matching model. These datasets include:
+Common Crawl: A large-scale repository of web-crawled text data, providing diverse and realistic textual descriptions.
+Wikipedia and Domain-Specific Corpora: Used to augment the dataset with descriptions relevant to common lost and found items (e.g., bags, phones, wallets, keys).
+Synthetic Data: Additional paraphrased examples are generated to simulate writing variations (e.g., “blue HP laptop bag” → “navy laptop backpack from HP”). This increases robustness to natural linguistic diversity
+This multi-source dataset ensures both generality and domain relevance.
+Data Cleaning and Transformation
+Before modelling, the dataset undergoes standardized preprocessing to improve text quality and ensure consistent representation.
+Noise Removal: Eliminates incomplete, irrelevant or extremely short descriptions.
+Standardization: Uniform formatting is applied, including removal of special characters when unnecessary.
+Tokenization: Performed using the Hugging Face tokenizer associated with Sentence-BERT. This ensures compatibility with the model’s vocabulary and token segmentation rules.
+Normalization: Descriptions are lowercased; excessive whitespace and irrelevant symbols are removed.
+Paraphrase-Based Augmentation: Additional linguistic variations are introduced through rule-based or model-assisted paraphrasing to improve model robustness.
+Unlike traditional NLP pipelines, lemmatization and stemming are not used, as transformer-based models such as SBERT rely on contextual rather than surface-level token features.
+Feature Selection and Engineering
+The system’s semantic matching relies on feature engineering to convert textual descriptions and contextual metadata into numerical representations that support semantic similarity computation.
+1. Semantic Text Embeddings (Primary Feature)
+The main feature representation uses Sentence-BERT (SBERT) to generate high-dimensional, context-aware sentence embeddings.
+SBERT transforms each description into a 768-dimensional (or 512 depending on model variant) embedding.
+These embeddings capture semantic meaning, enabling the system to identify matches even when descriptions differ lexically (e.g., “Samsung phone with cracked screen” vs. “broken Samsung smartphone”).
+SBERT is chosen for its proven performance in semantic similarity tasks and its efficiency when used with vector search systems (FAISS).
+2. Metadata Engineering (Contextual Features)
+To improve matching accuracy, additional non-textual features are encoded:
+Location Encoding: Locations such as “Library”, “Cafe”, or “Engineering Building” are mapped to numerical vectors using one-hot or embedding mappings.
+Time Encoding: Time metadata (e.g., “14:00”, “Morning”, “Weekday”) is converted into temporal buckets or cyclic encodings.This captures temporal proximity, helping the system prioritize items lost around the same time and location.
+3. Feature Fusion
+For ranking matched pairs, the system combines:
+Cosine similarity of SBERT embeddings
+Location proximity score
+Temporal proximity score
+A weighted scoring function is then used to re-rank candidates, improving practical matching performance beyond pure text similarity.
+Dataset Considerations
+The dataset is designed to be diverse, realistic, and balanced:
+Diverse Descriptions: Includes varied and informal descriptions to reflect real-world usage.
+Balanced Categories: Ensures representation across common lost and found items (e.g., bags, phones, wallets, keys) to avoid bias.
+Ethical Compliance: Data collection and usage adhere to ethical guidelines, including user consent and anonymization where applicable.
+3.3.2 NLP Model Development and Training
+The core of the system is an NLP-based semantic matching model designed to align textual descriptions of lost and found items. The following subsections detail the model’s architecture, training and validation.
+Model Selection and Architecture
+The system employs Sentence-BERT (SBERT) as the primary model for generating semantic embeddings from textual descriptions. SBERT is chosen for its ability to:
+Capture contextual meaning and semantic relationships between words.
+Handle synonyms, paraphrases, and varied descriptions effectively.
+Outperform traditional models like TF-IDF and Word2Vec in semantic understanding tasks.
+The model architecture includes:
+SBERT Encoder: Converts textual descriptions into 512-dimensional embeddings that represent their semantic meaning.
+Similarity Module: Computes cosine similarity between embeddings to identify potential matches.
+Metadata Fusion: Incorporates location and time features to re-rank matches based on spatial and temporal proximity.
+Hybrid Ranking Algorithm: A custom algorithm was engineered to combine the NLP score with metadata constraints. The final relevance score (S final ) is calculated as:
+S final = ( W1  * S semantic) + ( W2  * S time) + ( W3  * S location)
+Where:
+S semantic is the Cosine Similarity score between the text vectors (ranging from -1 to 1)
+S time is a decay function that prioritizes items found closer to the reported loss date.
+S location is a binary or radius-based score matching the lost and found locations.
+W represents tunable weights determined during the testing phase.
+Training and Validation
+The model is trained and validated using the following process:
+Data Splits: The dataset is divided into 70% training, 15% validation, and 15% test sets to ensure robust evaluation.
+Loss Function: Contrastive loss is used to maximize similarity for matching pairs and minimize it for non-matching pairs.
+Hyperparameters: 
+Optimizer: AdamW with a learning rate of 2e-5.
+Batch Size: 32.
+Epochs: 10 (with early stopping if validation performance plateaus).
+Evaluation Metrics: 
+Mean Reciprocal Rank (MRR): Measures the ranking quality of correct matches.
+Recall@K: Percentage of correct matches in the top-K results.
+Precision@K: Accuracy of the top-K matches.
+Proactive Searching for Unmatched Lost Items
+One of the key innovations of the system is its proactive searching mechanism, which continuously searches for matches for lost items that have not yet been found. This feature ensures that users are notified as soon as a matching found item is reported, even if the match does not occur immediately after the lost item is registered.
+How Proactive Searching Works:
+Vector Database Indexing:
+When a user reports a lost item, the system generates its semantic embedding using SBERT and stores it in a vector database (FAISS).
+The embedding is indexed for fast similarity search, allowing the system to efficiently compare it against newly reported found items.
+Periodic Matching Checks:
+The system periodically re-scans the vector database (e.g., every 24 hours) to check for new matches.
+This ensures that even if a found item is reported days or weeks later, the system will automatically detect and notify the user of the potential match.
+Feasible Search Period:
+Proactive searching is applied for a feasible period (e.g., 30 days), after which the lost item report is archived but remains searchable.
+Users receive notifications if a match is found within this period, reducing the need for manual follow-ups.
+Efficiency Considerations:
+The vector database is optimized for low-latency searches, ensuring that proactive matching does not degrade system performance.
+Batch processing is used to minimize computational overhead during periodic scans.
+Bias and Ethical Considerations
+The model is designed with bias mitigation and ethical compliance in mind:
+Dataset Bias: The dataset is augmented to include diverse descriptions and mitigate bias.
+Privacy: Data collection is minimized, and users can request data deletion.
+Security: Role-based access control and encryption are implemented to protect user data.
+Transparency: The system provides explanations for matches (e.g., “Matched based on description and location”).
+Verification Workflow
+A secure verification workflow ensures that items are returned to their rightful owners. The workflow includes:
+Secret Question Mechanism: Lost and Found Office staff set a secret question (e.g., “What’s inside the wallet?”) when uploading found items. Losers must answer correctly to claim an item, providing a simple yet effective verification layer.
+Admin Oversight: Admins review flagged claims (e.g., incorrect answers) and request additional proof (e.g., receipts, photos) if needed.
+This multi-layered approach balances security with usability, preventing both false positives and unnecessarily burdensome verification for legitimate claimants.
+3.4 Tools and Technologies
+The following tools and technologies are used to develop the system, chosen for their scalability, efficiency, and compatibility with the project’s requirements:
+Component
+Tools/Technologies
+Justification
+Programming Languages
+Python, JavaScript (React Native)
+Python for NLP; JavaScript for mobile app.
+Backend Framework
+Django or Node.js
+Django for rapid development; Node.js for scalability.
+NLP Model
+Sentence-BERT, TF-IDF
+SBERT for semantics; TF-IDF for baseline.
+Vector Database
+FAISS
+Fast similarity search for embeddings.
+Database
+PostgreSQL
+Reliable; supports complex queries.
+Authentication
+Firebase Auth or JWT
+Secure and easy to integrate.
+Mobile Framework
+React Native
+Cross-platform; user-friendly.
+Deployment
+AWS or Firebase
+Scalable cloud hosting.
+Version Control
+Git
+Collaboration and code management.
+Testing
+Pytest (Backend), Jest (Frontend)
+Ensure code quality and functionality.
+3.5 Project Requirements and Design Considerations
+Functional Requirements
+The system’s functional requirements include:
+User Registration and Authentication: Secure login via email/password or social accounts.
+Item Reporting: Losers report lost items with textual descriptions; staff report found items with text and metadata.
+Semantic Matching: NLP model matches lost and found item descriptions.
+Verification Workflow: Secret questions and admin oversight to confirm ownership.
+Notification System: Alerts users of potential matches and claim statuses.
+Admin Dashboard: Manage users, resolve disputes and monitor system performance.
+Non-Functional Requirements
+The system’s non-functional requirements ensure performance, scalability, usability, reliability, security and privacy:
+Performance: Fast responses (search results in <2 seconds); handle 50+ concurrent users.
+Scalability: Database and vector search support 100,000+ items.
+Usability: Intuitive mobile interface, minimal steps, clear feedback.
+Reliability: 99% uptime, regular backups, graceful error handling.
+Security: HTTPS, encrypted data, role-based access, fraud prevention.
+Privacy: GDPR compliance; minimal data collection; user data deletion.
+Maintainability: Modular code, documentation, consistent standards.
+Design Considerations
+The system is designed with the following key considerations:
+Usability: Simple, intuitive interface with guided workflows.
+Scalability: Efficient NLP model and vector database for large-scale search.
+Security: Multi-layer verification, admin oversight, and encryption.
+Performance: Optimized NLP model, caching, and indexing.
+Flexibility: Modular architecture for easy updates and expansions.
+Cost-Effectiveness: Open-source tools, free cloud tiers, and pre-trained models.
+Ethical Considerations: Privacy, fraud prevention, and transparency.
+3.6 Conclusion
+This chapter detailed the comprehensive methodology for developing and evaluating the Mobile-Based Semantic Lost and Found Recovery Platform. The Design Science Research (DSR) framework enabled iterative progress through nine phases, from planning to final testing. Methods included requirements gathering, NLP model development, mobile app design, and rigorous evaluation using quantitative and qualitative metrics.
+The system leverages NLP-based semantic matching, attention mechanisms, and multi-layered verification to address the core challenges in lost and found item retrieval. The following chapters will cover system architecture, implementation, results, and contributions, demonstrating how the proposed solution improves accuracy, efficiency, security, and user experience in lost and found scenarios.

@@ -1,0 +1,12 @@
+# Core Backend
+django>=5.0
+djangorestframework
+psycopg2-binary
+djangorestframework-simplejwt
+django-cors-headers
+
+# Phase 3: AI & Search
+# These are large and may require manual installation
+sentence-transformers
+faiss-cpu
+numpy
